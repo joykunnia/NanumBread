@@ -1,4 +1,4 @@
-package com.nanumbread.mvc;
+package com.bread;
 
 import org.junit.Before;
 import org.junit.Test;

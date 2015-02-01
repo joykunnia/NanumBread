@@ -1,4 +1,4 @@
-package com.nanumbread.mvc;
+package com.bread;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
