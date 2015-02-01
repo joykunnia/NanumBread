@@ -17,9 +17,17 @@
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+
+	<!-- spring dispatcher -->
     <servlet>
 		<servlet-name>mvc-dispatcher</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>
+				/WEB-INF/conf/springmvc/mvc-dispatcher-servlet.xml
+			</param-value>
+		</init-param>
         <load-on-startup>1</load-on-startup>
 	</servlet>
 
@@ -27,4 +35,13 @@
 		<servlet-name>mvc-dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+
+	<resource-ref>
+		<description>jdbc Datasource1</description>
+		<res-ref-name>jdbc/mydb1</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+
+
 </web-app>

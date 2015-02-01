@@ -18,4 +18,7 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName" value="java:comp/env/jdbc/mydb1"/> <property name="resourceRef" value="true" />
+    </bean>
 </beans>
